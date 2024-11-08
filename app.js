@@ -33,6 +33,9 @@ const Banner = require("./Router/Banner");
 const Service = require("./Router/Services");
 const ProviderTrust = require("./Router/ProviderTrust");
 const BlogPage = require("./Router/Blogs");
+const AboutPage = require("./Router/About");
+const OverViewPage = require("./Router/Overview");
+
 
 app.use("/api/admin",Admin)
 app.use("/api/contact",contactus)
@@ -40,8 +43,11 @@ app.use("/api/banner",Banner)
 app.use("/api/service",Service)
 app.use("/api/ptrust",ProviderTrust)
 app.use("/api/blog",BlogPage)
+app.use("/api/about",AboutPage)
+app.use("/api/overview",OverViewPage)
 
-const PORT = process.env.PORT || 8000;
+
+const PORT = process.env.PORT || 8200;
 app.listen(PORT, () => {
   console.log(`server running at http://localhost:${PORT}`);
 });
