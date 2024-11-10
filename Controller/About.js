@@ -20,7 +20,7 @@ class About {
   }
   async GetData(req, res) {
     try {
-      const Auth = await AboutModal.find({});
+      const Auth = await AboutModal.findOne({});
       res.status(200).json(Auth);
     } catch (err) {
       res.status(500).json({ error: err.message });

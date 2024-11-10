@@ -11,11 +11,11 @@ const AboutSchema = new mongoose.Schema({
 
   },
   counts: {
-    type: String,
+    type: Number,
   },
 
   order: {
-    type: String
+    type: Number
   }
 });
 
