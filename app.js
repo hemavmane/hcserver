@@ -35,7 +35,8 @@ const ProviderTrust = require("./Router/ProviderTrust");
 const BlogPage = require("./Router/Blogs");
 const AboutPage = require("./Router/About");
 const OverViewPage = require("./Router/Overview");
-
+const CompanyValueSection = require("./Router/CompanyValuesSection");
+const Mission = require("./Router/Mission");
 
 app.use("/api/admin",Admin)
 app.use("/api/contact",contactus)
@@ -45,7 +46,8 @@ app.use("/api/ptrust",ProviderTrust)
 app.use("/api/blog",BlogPage)
 app.use("/api/about",AboutPage)
 app.use("/api/overview",OverViewPage)
-
+app.use("/api/cvalue",CompanyValueSection)
+app.use("/api/mission",Mission)
 
 const PORT = process.env.PORT || 8200;
 app.listen(PORT, () => {
