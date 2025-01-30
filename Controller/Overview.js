@@ -21,9 +21,9 @@ class OverView {
   async GetData(req, res) {
     try {
       const Auth = await OverViewModal.find({});
-      res.status(200).json(Auth);
+      return res.status(200).json(Auth);
     } catch (err) {
-      res.status(500).json({ error: err.message });
+      return res.status(500).json({ error: err.message });
     }
   }
   async OverViewTrash(req, res) {
